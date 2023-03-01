@@ -1,0 +1,35 @@
+@import 'header';
+
+@mixin abc($w,$h,$rr:yellow){
+    width: $w;
+    height: $h;
+    background-color: $rr;
+}
+
+@mixin ax($hello : false){
+@if $hello{
+    background-color: yellow;
+}
+@else{
+    background-color: green;
+}
+}
+
+h1{
+    @include abc(200px,300px);
+}
+
+.ww{
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+.cleft{
+    @extend .ww;
+    outline: 5px dotted yellow;
+}
+.cright{
+    @extend .cleft;
+    margin: 30px * 20px / 40px;
+    @include ax(true);
+}

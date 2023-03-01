@@ -1,0 +1,22 @@
+$bg : lightgreen;
+$font-size : 55px;
+
+body{
+    background-color: $bg;
+    color: black;
+    font-size: $font-size;
+}
+//nesting
+nav{
+    ul{
+        display: flex;
+        gap: 50px;
+        li{
+            list-style-type: none;
+            color: #888888;
+            &:hover{
+                color: yellow;
+            }
+        }
+    }
+}

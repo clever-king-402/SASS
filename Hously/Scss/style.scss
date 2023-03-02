@@ -1,0 +1,24 @@
+@import 'var';
+@import 'mixin';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rebeccapurple;
+}
+body{
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.header{
+    @include flex;
+    li{
+        display: inline;
+        padding: 14px;
+    }
+}

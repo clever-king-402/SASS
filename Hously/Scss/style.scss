@@ -1,24 +1,44 @@
-@import 'var';
+@import 'initial';
 @import 'mixin';
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: rebeccapurple;
-}
-body{
-    font-family: 'League Spartan', sans-serif;
-}
 
 .container{
-    max-width: 1170px;
+    max-width: 95%;
     margin: auto;
+   @include flex;
 }
 
-.header{
-    @include flex;
-    li{
-        display: inline;
-        padding: 14px;
+nav {
+    width: 825px;
+    @include flex(flex-end,center);
+    padding-right: 20px;
+    @include res-992{
+        display: none;
+    }
+    ul{
+        @include flex;
+        li{
+            list-style-type: none;
+            padding: 25px 15px;
+        }
+    }
+}
+
+.login-btn{
+    @include flex(center,center,10px);
+    .icon{
+        @include flex;
+        width: 40px;
+        height: 40px;
+        background-color: $color;
+        border-radius: 50%;
+    }
+
+}
+.btn{
+    padding: 15px 35px;
+    background-color: $color;
+    border-radius: 25px;
+    a{
+        color: white;
     }
 }
